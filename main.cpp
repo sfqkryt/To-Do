@@ -40,10 +40,20 @@ int main()
     }
     else
     {
-       tusks.clear();
-       cout<<"All tasks deleted!"<<endl;
-    
+        cout<<"Choice number of task:"<<endl;
+       for(int i=0;i<tusks.size();i++)
+       {
+        cout<<blya++<<'.'<<tusks[i]<<endl;
+       }
+       cin>>del;
     }
+    if(del>0 && del<=tusks.size())
+    {
+        tusks.erase(tusks.begin() + del - 1);
+        cout << "Task deleted!" << endl;
+    }
+    
+    
         break;
 
     case '3':
